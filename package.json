@@ -11,14 +11,14 @@
   "dependencies": {
     "@supabase/ssr": "^0.10.0",
     "@supabase/supabase-js": "^2.101.1",
-    "next": "15.3.2",
+    "next": "15.5.14",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
-    "eslint-config-next": "15.3.2",
+    "eslint-config-next": "15.5.14",
     "tailwindcss": "^4"
   }
 }
