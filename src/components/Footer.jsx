@@ -61,12 +61,12 @@ export default function Footer() {
                         &copy; {new Date().getFullYear()} NovaLife Wellness. All rights reserved.
                     </p>
                     <div className="flex items-center gap-4 sm:gap-6">
-                        <a href="/privacy" className="text-gray-500 text-xs sm:text-sm hover:text-emerald-400 transition-colors">
+                        <Link href="/privacy" className="text-gray-500 text-xs sm:text-sm hover:text-emerald-400 transition-colors">
                             Privacy Policy
-                        </a>
-                        <a href="/terms" className="text-gray-500 text-xs sm:text-sm hover:text-emerald-400 transition-colors">
+                        </Link>
+                        <Link href="/terms" className="text-gray-500 text-xs sm:text-sm hover:text-emerald-400 transition-colors">
                             Terms of Service
-                        </a>
+                        </Link>
                     </div>
                     <p className="text-gray-500 text-xs sm:text-sm">
                         Built for a healthier world
