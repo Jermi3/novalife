@@ -1,21 +1,28 @@
+'use client';
+
+import BookingProvider from '@/components/BookingProvider';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Problem from '@/components/Problem';
 import Services from '@/components/Services';
-import About from '@/components/About';
 import Testimonials from '@/components/Testimonials';
+import About from '@/components/About';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main>
-      <Header />
-      <Hero />
-      <Services />
-      <About />
-      <Testimonials />
-      <CTA />
-      <Footer />
-    </main>
+    <BookingProvider>
+      <main>
+        <Header />
+        <Hero />
+        <Problem />
+        <Services />
+        <Testimonials />
+        <About />
+        <CTA />
+        <Footer />
+      </main>
+    </BookingProvider>
   );
 }
