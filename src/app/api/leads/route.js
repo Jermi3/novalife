@@ -1,7 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
-import { resend } from '@/lib/resend'
-import { newLeadEmail } from '@/lib/emails/new-lead'
 
 export async function POST(request) {
   try {
@@ -42,19 +40,6 @@ export async function POST(request) {
         { status: 500 }
       )
     }
-
-    // Fire-and-forget email notification — never blocks the response
-    const leadData = { name, email, phone, message: message || tried, source, quiz_score, quiz_tier, quiz_answers }
-    const { subject, html } = newLeadEmail(leadData)
-
-    resend.emails.send({
-      from: 'NovaLife Wellness <onboarding@resend.dev>',
-      to: process.env.NOTIFICATION_EMAIL,
-      subject,
-      html,
-    }).catch((err) => {
-      console.error('Email notification failed:', err)
-    })
 
     return NextResponse.json({ success: true })
   } catch (err) {
